@@ -7,9 +7,9 @@
         "client": "mongo",
         "host": "127.0.0.1",
         "port": 27017,
-        "database": "dsapi",
-        "username": "dsbod",
-        "password": "dsbod!@#$%"
+        "database": "strapi",
+        "username": "user_name",
+        "password": "pass_xxxx"
       },
       "options": {
         "authenticationDatabase": "dsapi",
