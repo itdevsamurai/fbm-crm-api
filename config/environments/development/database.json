@@ -12,7 +12,7 @@
         "password": "pass_xxxx"
       },
       "options": {
-        "authenticationDatabase": "dsapi",
+        "authenticationDatabase": "strapi",
         "ssl": false
       }
     }
