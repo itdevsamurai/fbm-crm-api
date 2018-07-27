@@ -65,11 +65,8 @@ $RECYCLE.BIN/
 # Logs and databases
 ############################
 
-.tmp
 *.log
 *.sql
-*.sqlite
-*.sqlite3
 
 
 ############################
@@ -78,6 +75,8 @@ $RECYCLE.BIN/
 
 *#
 ssl
+.editorconfig
+.gitattributes
 .idea
 nbproject
 
@@ -93,11 +92,12 @@ logs
 results
 node_modules
 .node_history
-config/environments
+
 
 ############################
 # Tests
 ############################
 
+test
 testApp
 coverage
