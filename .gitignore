@@ -94,7 +94,8 @@ results
 node_modules
 .node_history
 config/environments
-.package-lock.json
+package-lock.json
+admin/package-lock.json
 
 ############################
 # Tests
