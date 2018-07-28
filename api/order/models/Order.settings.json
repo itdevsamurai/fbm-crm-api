@@ -21,15 +21,9 @@
     "quantity": {
       "type": "integer"
     },
-    "createdAt": {
-      "type": "date"
-    },
     "invoice": {
       "model": "invoice",
       "via": "orders"
-    },
-    "updatedAt": {
-      "type": "date"
     }
   }
 }

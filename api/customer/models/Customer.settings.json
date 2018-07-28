@@ -24,12 +24,6 @@
     "facebook": {
       "type": "string"
     },
-    "createdAt": {
-      "type": "date"
-    },
-    "updatedAt": {
-      "type": "date"
-    },
     "user": {
       "model": "user",
       "via": "customers",

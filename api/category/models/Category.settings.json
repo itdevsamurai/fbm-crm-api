@@ -15,12 +15,6 @@
     "desc": {
       "type": "text"
     },
-    "createdAt": {
-      "type": "date"
-    },
-    "updatedAt": {
-      "type": "date"
-    },
     "user": {
       "model": "user",
       "via": "categories",

@@ -21,12 +21,6 @@
     "stock": {
       "type": "integer"
     },
-    "createdAt": {
-      "type": "date"
-    },
-    "updatedAt": {
-      "type": "date"
-    },
     "images": {
       "collection": "file",
       "via": "related",
