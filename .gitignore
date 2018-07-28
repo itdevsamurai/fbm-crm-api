@@ -92,6 +92,7 @@ pids
 logs
 results
 node_modules
+admin/node_modules
 .node_history
 config/environments
 package-lock.json
