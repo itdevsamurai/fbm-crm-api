@@ -1,0 +1,35 @@
+{
+  "connection": "default",
+  "collectionName": "",
+  "info": {
+    "name": "order",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "user": {
+      "model": "user",
+      "via": "orders",
+      "plugin": "users-permissions"
+    },
+    "product": {
+      "model": "product",
+      "via": "order"
+    },
+    "quantity": {
+      "type": "integer"
+    },
+    "createdAt": {
+      "type": "date"
+    },
+    "invoice": {
+      "model": "invoice",
+      "via": "orders"
+    },
+    "updatedAt": {
+      "type": "date"
+    }
+  }
+}

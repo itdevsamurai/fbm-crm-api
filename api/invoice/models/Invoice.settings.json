@@ -1,0 +1,50 @@
+{
+  "connection": "default",
+  "collectionName": "",
+  "info": {
+    "name": "invoice",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "note": {
+      "type": "text"
+    },
+    "extraFee": {
+      "type": "integer"
+    },
+    "discount": {
+      "type": "integer"
+    },
+    "total": {
+      "type": "integer"
+    },
+    "status": {
+      "type": "string"
+    },
+    "createdAt": {
+      "type": "date"
+    },
+    "updatedAt": {
+      "type": "date"
+    },
+    "user": {
+      "model": "user",
+      "via": "invoices",
+      "plugin": "users-permissions"
+    },
+    "orders": {
+      "collection": "order",
+      "via": "invoice"
+    },
+    "customer": {
+      "model": "customer",
+      "via": "invoices"
+    }
+  }
+}

@@ -38,6 +38,26 @@
       "via": "users",
       "plugin": "users-permissions",
       "configurable": false
+    },
+    "categories": {
+      "collection": "category",
+      "via": "user"
+    },
+    "products": {
+      "collection": "product",
+      "via": "user"
+    },
+    "customers": {
+      "collection": "customer",
+      "via": "user"
+    },
+    "orders": {
+      "collection": "order",
+      "via": "user"
+    },
+    "invoices": {
+      "collection": "invoice",
+      "via": "user"
     }
   }
 }

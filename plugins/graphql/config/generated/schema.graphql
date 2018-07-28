@@ -1,16 +1,88 @@
+type Category {
+  _id: ID!
+  createdAt: DateTime
+  updatedAt: DateTime
+  name: String
+  desc: String
+  user: UsersPermissionsUser
+  products: Product
+}
+
+type Customer {
+  _id: ID!
+  createdAt: DateTime
+  updatedAt: DateTime
+  name: String
+  email: String
+  phone: String
+  address: String
+  facebook: String
+  user: UsersPermissionsUser
+  invoices: Invoice
+}
+
 """
 The `DateTime` scalar represents a date and time following the ISO 8601 standard
 """
 scalar DateTime
+
+type Invoice {
+  _id: ID!
+  createdAt: DateTime
+  updatedAt: DateTime
+  title: String
+  note: String
+  extraFee: Int
+  discount: Int
+  total: Int
+  status: String
+  user: UsersPermissionsUser
+  customer: Customer
+  orders(sort: String, limit: Int, start: Int, where: JSON): [Order]
+}
 
 """
 The `JSON` scalar type represents JSON values as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
 """
 scalar JSON
 
-union Morph = UploadFile | UsersPermissionsPermission | UsersPermissionsRole | UsersPermissionsUser
+union Morph = Category | Customer | Invoice | Order | Product | UploadFile | UsersPermissionsPermission | UsersPermissionsRole | UsersPermissionsUser
+
+type Order {
+  _id: ID!
+  createdAt: DateTime
+  updatedAt: DateTime
+  user: UsersPermissionsUser
+  product: Product
+  quantity: Int
+  invoice: Invoice
+}
+
+type Product {
+  _id: ID!
+  createdAt: DateTime
+  updatedAt: DateTime
+  name: String
+  desc: String
+  price: Int
+  stock: Int
+  user: UsersPermissionsUser
+  category: Category
+  order: Order
+  images(sort: String, limit: Int, start: Int, where: JSON): [UploadFile]
+}
 
 type Query {
+  category(id: ID!): Category
+  categories(sort: String, limit: Int, start: Int, where: JSON): [Category]
+  customer(id: ID!): Customer
+  customers(sort: String, limit: Int, start: Int, where: JSON): [Customer]
+  invoice(id: ID!): Invoice
+  invoices(sort: String, limit: Int, start: Int, where: JSON): [Invoice]
+  order(id: ID!): Order
+  orders(sort: String, limit: Int, start: Int, where: JSON): [Order]
+  product(id: ID!): Product
+  products(sort: String, limit: Int, start: Int, where: JSON): [Product]
   files(sort: String, limit: Int, start: Int, where: JSON): [UploadFile]
   role(id: ID!): UsersPermissionsRole
 
@@ -61,4 +133,9 @@ type UsersPermissionsUser {
   email: String!
   provider: String
   role: UsersPermissionsRole
+  categories(sort: String, limit: Int, start: Int, where: JSON): [Category]
+  products(sort: String, limit: Int, start: Int, where: JSON): [Product]
+  customers(sort: String, limit: Int, start: Int, where: JSON): [Customer]
+  orders(sort: String, limit: Int, start: Int, where: JSON): [Order]
+  invoices(sort: String, limit: Int, start: Int, where: JSON): [Invoice]
 }

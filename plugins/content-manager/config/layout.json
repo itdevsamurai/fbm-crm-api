@@ -1,1 +1,106 @@
-{}
+{
+  "category": {
+    "attributes": {
+      "name": {
+        "appearance": ""
+      },
+      "desc": {
+        "appearance": ""
+      },
+      "createdAt": {
+        "appearance": ""
+      },
+      "updatedAt": {
+        "appearance": ""
+      }
+    }
+  },
+  "product": {
+    "attributes": {
+      "name": {
+        "appearance": ""
+      },
+      "desc": {
+        "appearance": ""
+      },
+      "price": {
+        "appearance": ""
+      },
+      "stock": {
+        "appearance": ""
+      },
+      "createdAt": {
+        "appearance": ""
+      },
+      "updatedAt": {
+        "appearance": ""
+      }
+    }
+  },
+  "customer": {
+    "attributes": {
+      "name": {
+        "appearance": ""
+      },
+      "email": {
+        "appearance": ""
+      },
+      "phone": {
+        "appearance": ""
+      },
+      "address": {
+        "appearance": ""
+      },
+      "facebook": {
+        "appearance": ""
+      },
+      "createdAt": {
+        "appearance": ""
+      },
+      "updatedAt": {
+        "appearance": ""
+      }
+    }
+  },
+  "order": {
+    "attributes": {
+      "quantity": {
+        "appearance": ""
+      },
+      "createdAt": {
+        "appearance": ""
+      },
+      "updatedAt": {
+        "appearance": ""
+      }
+    }
+  },
+  "invoice": {
+    "attributes": {
+      "title": {
+        "appearance": ""
+      },
+      "note": {
+        "appearance": ""
+      },
+      "extraFee": {
+        "appearance": ""
+      },
+      "discount": {
+        "appearance": ""
+      },
+      "total": {
+        "appearance": ""
+      },
+      "status": {
+        "appearance": ""
+      },
+      "createdAt": {
+        "appearance": ""
+      },
+      "updatedAt": {
+        "appearance": ""
+      }
+    }
+  }
+}
