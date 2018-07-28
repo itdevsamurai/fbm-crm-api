@@ -102,6 +102,7 @@ admin/node_modules
 admin/package-lock.json
 config/environments
 public/uploads/
+plugins/graphql/config/generated/
 
 ############################
 # Tests
